@@ -501,6 +501,10 @@ Can you explain how you have implememnted Docker for your application?
 
 5. Run below shell script to create an environment with give no. containers
 	$ ./create-env.sh 10
+Note : To check IPaddress of all containers 
+This to check single container : $ docker inspect --format='{{ .NetworkSettings.Networks.bridge.IPAddress }}' tomcat-server1
+This to check single container : $ docker inspect --format='{{ .NetworkSettings.Networks.bridge.IPAddress }}' $(docker ps -q)
+
 
 6. Observer all containers created using above script ($ docker ps)
 
